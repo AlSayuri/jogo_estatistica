@@ -1,0 +1,40 @@
+.tab-group {
+  list-style:none;
+  padding:0;
+  margin:0 0 0px 0;
+  font-family: 'Open Sans Condensed', sans-serif;
+  position: relative;
+  margin-top: 0px;
+  text-align: center;
+  font-size: 40px;
+  color: #ddd;
+  text-shadow: 3px 3px 10px #000;
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+
+li a {
+    display:block;
+    text-decoration:none;
+    background: rgba(173,173,173,0.1);
+    padding:20px;
+    color:gray;
+    font-size:20px;
+    float:left;
+    width:25%;
+    text-align:center;
+    cursor:pointer;
+    transition:.5s ease;
+}
+a:hover {
+      background: rgba(3,3,3,.1);
+      color: white;
+
+  }
+.active a {
+  background-color: transparent
+}

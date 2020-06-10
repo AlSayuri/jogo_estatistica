@@ -1,0 +1,76 @@
+/*tab estilo */
+ .tabs input[type=radio] {
+   position: absolute;
+   top: -9999px;
+   left: -9999px;
+ }
+ .tabs {
+   list-style:none;
+   padding:0;
+   margin:0 0 0px 0;
+   position: relative;
+   margin-top: -3.5px;
+   text-align: center;
+   font-size: 40px;
+   color: #ddd;
+   text-shadow: 3px 3px 10px #000;
+ }
+ .tabs li{
+    display:block;
+    background: transparent;
+    padding:0px;
+    float:left;
+    width:25%;
+ }
+ .tabs label {
+   display: block;
+   padding: 10px 20px;
+   border-radius: 2px 2px 0 0;
+   color: #08C;
+   font-size: 24px;
+   font-weight: normal;
+   font-family: 'Lily Script One', helveti;
+   background: rgba(255,255,255,0.2);
+   cursor: pointer;
+   top: 3px;
+   -webkit-transition: all 0.2s ease-in-out;
+   -moz-transition: all 0.2s ease-in-out;
+   -o-transition: all 0.2s ease-in-out;
+   transition: all 0.2s ease-in-out;
+ }
+ .tabs label:hover {
+   background: rgba(255,255,255,0.3);
+   color: white;
+ }
+ [id^=tab]:checked + label {
+   background: transparent;
+   color: white;
+   top: 0;
+ }
+ [id^=tab]:checked ~ [id^=tab-content] {
+   display: block;
+ }
+ .tab-content{
+   z-index: 2;
+   display: none;
+   text-align: left;
+   width: 100%;
+   font-size: 20px;
+   line-height: 140%;
+   padding-top: 10px;
+   background: transparent;
+   padding: 5%;
+   color: white;
+   position: absolute;
+   top: 53px;
+   left: 0;
+   box-sizing: border-box;
+   -webkit-animation-duration: 0.5s;
+   -o-animation-duration: 0.5s;
+   -moz-animation-duration: 0.5s;
+   animation-duration: 0.5s;
+ }
+/* fim tab estilo */
+#tab-content1{
+  padding-left: 150px;
+}

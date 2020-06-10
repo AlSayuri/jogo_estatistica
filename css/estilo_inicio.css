@@ -1,0 +1,99 @@
+/* escolha personagem */
+  .div_personagem{
+    display: inline-block;
+    margin: 0px;
+    width:100px;
+  }
+  .p_tela {
+    position: relative;
+  	display: inline-block;
+  	box-sizing: border-box;
+  	width: 120px;
+  	margin: 0px 1% 10px 0;
+  	height: 120px;
+  	vertical-align: top;
+  	font-size: 22px;
+  	text-align: center;
+    background-color: #6d4c41;
+    margin-top: -20;
+
+  }
+  /*
+  .div_personagem label {
+  	border: 1px solid rgba($font-color,.15);
+  	box-sizing: border-box;
+  	display: block;
+  	height: 100%;
+  	width: 100%;
+  	padding: 10px 10px 30px 10px;
+  	cursor: pointer;
+  	transition: all .5s ease-in-out;
+  }*/
+  .div_personagem label {
+  	border: 3px dashed white;
+    margin: 0;
+  	height: 100%;
+  	width: 100%;
+  	cursor: pointer;
+  	transition: all .5s ease-in-out;
+  }
+  img {
+      position:absolute;
+      z-index:1;
+      top:0;
+      left:0;
+      width:98%;
+      height:98%;
+  }
+  .div_personagem input[type="radio"]:checked ~ label {
+	   border: 3px solid white;
+     background: transparent;
+     color: transparent;
+   }
+   .div_personagem label:hover {
+     background: transparent;
+     color: transparent;
+   }
+/* fim escolha personagem */
+/* nome e botão começar*/
+  .nome_comecar{
+    display: flex;
+    justify-content: space-between;
+    background-color: black;
+    margin-left: 200px;
+    position: absolute;
+    top: 50%;
+    width: 900px
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    justify-content: space-between;
+}
+  input[type="text"]{
+    display: block;
+    outline: 0;
+    background-color: #b0bec5;
+    width: 250px;
+    border-radius: 3px;
+    border-color: 546e7a;
+    padding: 10px 15px;
+    margin: 0 auto 10px auto;
+    display: block;
+    text-align: center;
+    font-size: 24px;
+    color: black;
+}
+  button {
+    border-color: #3498db;
+    color: #fff;
+    box-shadow: 0 0 40px 40px #3498db inset, 0 0 0 0 #3498db;
+    transition: all 150ms ease-in-out;
+    margin-left: 85px;
+    width: 110px;
+    margin-bottom: 10px;
+}
+  button:hover {
+  background-color: transparent;
+  color: white;
+  box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
+}
+/* fim nome e botão começar*/

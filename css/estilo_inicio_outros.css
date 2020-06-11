@@ -1,0 +1,76 @@
+#tab-content2 h1{
+  font-size: 20px;
+}
+p{
+  font-size: 18px;
+  color: #707B7C;
+  -webkit-text-stroke-width: 0.01px;
+  -webkit-text-stroke-color: black;
+}
+/*personagem rank*/
+  #tab-content3{
+    padding-top: 10px;
+    align-content: center;
+    padding-left: 1%;
+    padding-right: 1%;
+  }
+  .rank_personagem {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .rank_personagem img{
+    width: 120px;
+    height: 120px;
+    position: relative;
+  }
+/*fim personagem rank*/
+/*tabela rank*/
+  .tabelas{
+    display: flex;
+    justify-content: space-between;
+  }
+  .container_rank th h1 {
+	  font-weight: bold;
+	  font-size: 1em;
+    text-align: center;
+    color: #185875;
+  }
+  .container_rank td {
+	  font-weight: normal;
+	  font-size: 18px;
+    -webkit-box-shadow: 0 2px 2px -2px #0E1119;
+	  -moz-box-shadow: 0 2px 2px -2px #0E1119;
+	  box-shadow: 0 2px 2px -2px #0E1119;
+    text-align: center;
+  }
+  .container_rank {
+	  overflow: hidden;
+	  width: 33%;
+    display: table;
+  }
+  .container_rank td, .container_rank th {
+	  padding-bottom: 2%;
+	  padding-top: 2%;
+    padding-left:2%;
+  }
+  /* Background-color of the odd rows */
+  .container_rank tr:nth-child(odd) {
+	  background-color: #323C50;
+  }
+  /* Background-color of the even rows */
+  .container_rank tr:nth-child(even) {
+	  background-color: #2C3446;
+  }
+  .container_rank th {
+	  background-color: #1F2739;
+  }
+  .container_rank td:first-child { color: #FB667A; }
+  .container_rank tr:hover {
+    background-color: #464A52;
+    -webkit-box-shadow: 0 6px 6px -6px #0E1119;
+	  -moz-box-shadow: 0 6px 6px -6px #0E1119;
+    box-shadow: 0 6px 6px -6px #0E1119;
+  }
+/* fim tabela rank*/

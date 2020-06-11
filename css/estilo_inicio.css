@@ -1,3 +1,6 @@
+#tab-content1{
+  padding-left: 200px
+}
 /* escolha personagem */
   .div_personagem{
     display: inline-block;
@@ -14,23 +17,11 @@
   	vertical-align: top;
   	font-size: 22px;
   	text-align: center;
-    background-color: #6d4c41;
+    background-color: #212F3C;
     margin-top: -20;
-
   }
-  /*
   .div_personagem label {
-  	border: 1px solid rgba($font-color,.15);
-  	box-sizing: border-box;
-  	display: block;
-  	height: 100%;
-  	width: 100%;
-  	padding: 10px 10px 30px 10px;
-  	cursor: pointer;
-  	transition: all .5s ease-in-out;
-  }*/
-  .div_personagem label {
-  	border: 3px dashed white;
+  	border: 3px dashed rgb(166, 172, 175);
     margin: 0;
   	height: 100%;
   	width: 100%;
@@ -44,11 +35,15 @@
       left:0;
       width:98%;
       height:98%;
+      padding-bottom: 1px;
   }
   .div_personagem input[type="radio"]:checked ~ label {
 	   border: 3px solid white;
      background: transparent;
      color: transparent;
+     -webkit-box-shadow: 0 0 4px 4px white;
+     -moz-box-shadow: 0 0 4px 4px white;
+     box-shadow: 0 0 4px 4px white;
    }
    .div_personagem label:hover {
      background: transparent;
@@ -59,7 +54,6 @@
   .nome_comecar{
     display: flex;
     justify-content: space-between;
-    background-color: black;
     margin-left: 200px;
     position: absolute;
     top: 50%;
@@ -92,8 +86,8 @@
     margin-bottom: 10px;
 }
   button:hover {
-  background-color: transparent;
   color: white;
+  background-color: transparent;
   box-shadow: 0 0 10px 0 #3498db inset, 0 0 10px 4px #3498db;
 }
 /* fim nome e botão começar*/

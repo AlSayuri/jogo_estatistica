@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="css/estilo_geral.css">
     <link rel="stylesheet" href="css/estilo_inicio_tab.css">
     <link rel="stylesheet" href="css/estilo_inicio.css">
+    <link rel="stylesheet" href="css/estilo_inicio_outros.css">
 
     <title>Hello, world!</title>
   </head>
@@ -21,7 +22,7 @@
           <!-- tab 1 -->
           <li>
             <input type="radio" checked name="tabs" id="tab1">
-            <label for="tab1">tab 1</label>
+            <label for="tab1">Início</label>
             <div id="tab-content1" class="tab-content">
               <form action="" method="post">
                 <div class="div_personagem">
@@ -47,10 +48,8 @@
                   </p><!-- p_tela-->
                 </div><!-- div_personagem-->
                 <div class="nome_comecar">
-                    <!--<input type="text" placeholder="Nome">
-
+                    <input type="text" placeholder="Nome">
                     <button type="submit" id="jogar">Jogar</button>
-                    descomentar-->
                 </div>  <!-- nome_comecar -->
               </form>
             </div>
@@ -59,25 +58,131 @@
           <!-- tab 2 -->
           <li>
             <input type="radio" name="tabs" id="tab2">
-            <label for="tab2">tab 2</label>
-            <div id="tab-content2" class="tab-content animated fadeIn">
-              bbb
+            <label for="tab2">Como Jogar</label>
+            <div id="tab-content2" class="tab-content">
+              <h1>Objetivo:</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <h1>Pontuação:</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
+              <h1>Personagens:</h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              </p>
             </div>
           </li>
           <!-- fim tab 2 -->
           <!-- tab 3 -->
           <li>
             <input type="radio" name="tabs" id="tab3">
-            <label for="tab3">tab 3</label>
+            <label for="tab3">Ranking</label>
             <div id="tab-content3" class="tab-content animated fadeIn">
-              ccc
+              <!-- personagem rank -->
+              <div class="rank_personagem">
+                <div class="imagem">
+                  <img src="imagem/joseph.png">
+                </div>
+                <div class="imagem">
+                  <img src="imagem/jotaro.png">
+                </div>
+                <div class="imagem">
+                  <img src="imagem/giorno.png">
+                </div>
+              </div>
+              <!-- fim personagem rank -->
+              <!-- rank personagem 1 -->
+              <div class="tabelas">
+              <table class="container_rank">
+	               <thead>
+		                <tr>
+			                <th><h1>#</h1></th>
+			                <th><h1>Nome</h1></th>
+			                <th><h1>Pontos</h1></th>
+		                  <th><h1>Tempo</h1></th>
+		                </tr>
+                    <tbody>
+                      <?php
+                          $i=1;
+                          do {
+                              echo "<tr>";
+                              echo "<td>" . $i . "</td>";
+                              echo "<td>nome" . $i . "</td>";
+                              echo "<td>xxxx". "</td>";
+                              echo "<td>xx:xx" . "</td>";
+                              echo "</tr>";
+                              $i++;
+                          } while ($i < 9);
+                      ?>
+                    </tbody>
+	              </thead>
+              </table>
+              <!-- fim rank personagem 1 -->
+              <!-- rank personagem 2 -->
+              <table class="container_rank">
+	               <thead>
+		                <tr>
+			                <th><h1>#</h1></th>
+			                <th><h1>Nome</h1></th>
+			                <th><h1>Pontos</h1></th>
+		                  <th><h1>Tempo</h1></th>
+		                </tr>
+                    <tbody>
+                      <?php
+                          $i=1;
+                          do {
+                              echo "<tr>";
+                              echo "<td>" . $i . "</td>";
+                              echo "<td>nome" . $i . "</td>";
+                              echo "<td>xxxx". "</td>";
+                              echo "<td>xx:xx" . "</td>";
+                              echo "</tr>";
+                              $i++;
+                          } while ($i < 9);
+                      ?>
+                    </tbody>
+	              </thead>
+              </table>
+              <!-- fim rank personagem 2 -->
+              <!-- rank personagem 3 -->
+              <table class="container_rank">
+	               <thead>
+		                <tr>
+			                <th><h1>#</h1></th>
+			                <th><h1>Nome</h1></th>
+			                <th><h1>Pontos</h1></th>
+		                  <th><h1>Tempo</h1></th>
+		                </tr>
+                    <tbody>
+                      <?php
+                          $i=1;
+                          do {
+                              echo "<tr>";
+                              echo "<td>" . $i . "</td>";
+                              echo "<td>nome" . $i . "</td>";
+                              echo "<td>xxxx". "</td>";
+                              echo "<td>xx:xx" . "</td>";
+                              echo "</tr>";
+                              $i++;
+                          } while ($i < 9);
+                      ?>
+                    </tbody>
+	              </thead>
+              </table>
+              <!-- fim rank personagem 3 -->
+              <!-- fim tabela rank -->
             </div>
           </li>
           <!-- fim tab 3 -->
           <!-- tab 4 -->
           <li>
             <input type="radio" name="tabs" id="tab4">
-            <label for="tab4">tab 4</label>
+            <label for="tab4">Sobre</label>
             <div id="tab-content4" class="tab-content animated fadeIn">
               dddd
             </div>

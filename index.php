@@ -24,7 +24,7 @@
             <input type="radio" checked name="tabs" id="tab1">
             <label for="tab1">Início</label>
             <div id="tab-content1" class="tab-content">
-              <form action="" method="post">
+              <form action="batalha.php" method="post">
                 <div class="div_personagem">
                   <p class="p_tela">
                         <!-- p1-->
@@ -48,7 +48,7 @@
                   </p><!-- p_tela-->
                 </div><!-- div_personagem-->
                 <div class="nome_comecar">
-                    <input type="text" placeholder="Nome">
+                    <input type="text" name="nome" placeholder="Nome">
                     <button type="submit" id="jogar">Jogar</button>
                 </div>  <!-- nome_comecar -->
               </form>

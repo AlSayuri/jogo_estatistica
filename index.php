@@ -104,7 +104,6 @@
 			                <th><h1>#</h1></th>
 			                <th><h1>Nome</h1></th>
 			                <th><h1>Pontos</h1></th>
-		                  <th><h1>Tempo</h1></th>
 		                </tr>
                     <tbody>
                       <?php
@@ -114,7 +113,6 @@
                               echo "<td>" . $i . "</td>";
                               echo "<td>nome" . $i . "</td>";
                               echo "<td>xxxx". "</td>";
-                              echo "<td>xx:xx" . "</td>";
                               echo "</tr>";
                               $i++;
                           } while ($i < 9);
@@ -130,7 +128,6 @@
 			                <th><h1>#</h1></th>
 			                <th><h1>Nome</h1></th>
 			                <th><h1>Pontos</h1></th>
-		                  <th><h1>Tempo</h1></th>
 		                </tr>
                     <tbody>
                       <?php
@@ -140,7 +137,6 @@
                               echo "<td>" . $i . "</td>";
                               echo "<td>nome" . $i . "</td>";
                               echo "<td>xxxx". "</td>";
-                              echo "<td>xx:xx" . "</td>";
                               echo "</tr>";
                               $i++;
                           } while ($i < 9);
@@ -156,7 +152,6 @@
 			                <th><h1>#</h1></th>
 			                <th><h1>Nome</h1></th>
 			                <th><h1>Pontos</h1></th>
-		                  <th><h1>Tempo</h1></th>
 		                </tr>
                     <tbody>
                       <?php
@@ -166,7 +161,6 @@
                               echo "<td>" . $i . "</td>";
                               echo "<td>nome" . $i . "</td>";
                               echo "<td>xxxx". "</td>";
-                              echo "<td>xx:xx" . "</td>";
                               echo "</tr>";
                               $i++;
                           } while ($i < 9);
@@ -184,7 +178,19 @@
             <input type="radio" name="tabs" id="tab4">
             <label for="tab4">Sobre</label>
             <div id="tab-content4" class="tab-content animated fadeIn">
-              dddd
+              <h1>
+                &nbsp;&nbsp;&nbsp;&nbsp;Jogo desenvolvido para a disciplina de Estatística Aplicada do curso de pós-graduação em Banco de Dados
+                e BI 1/2020 da Faculdade de Tecnologia Senac DF. <br>
+              </h1>
+              <h1>
+                &nbsp;&nbsp;&nbsp;&nbsp;Deselvolvido por: <br>
+                <ul id="nome_alunos">
+                  <li>&nbsp;&nbsp;Aline Sayuri Hashimura</li>
+                  <li>&nbsp;&nbsp;Matheus Henrique Xavier Alves</li>
+                </ul>
+              </h1>
+              <div class="gif">
+              </div>
             </div>
           </li>
           <!-- fim tab 3 -->

@@ -170,7 +170,7 @@ function resultado(correct,presentIndex,clicked ){
         else{
           pontos_adversario = pontos_adversario - pontos_jogador;
         }
-        texto_resultado_rodada = texto_resultado_rodada + "<br> Adversário acertou. <br> Perde "+ pontos_adversario +" pontos.";
+        texto_resultado_rodada = texto_resultado_rodada + "<br> Adversário acertou. <br> Perde "+ pontos_adversario +" ponto.";
       }
       else{
         texto_resultado_rodada = texto_resultado_rodada + "<br> Adversário errou.";
@@ -196,7 +196,10 @@ function mudar_imagens(presentIndex){
 }
 
 $(document).ready(function() {
-
+  $("#tela_jogo_p1").hide();
+  $("#tela_jogo_p2").hide();
+  $("#tela_jogo_p3").hide();
+  $("#tela_final").hide();
   var presentIndex=0;
   var clicked=0;
 
@@ -209,7 +212,6 @@ $(document).ready(function() {
     clicked=$(this).val();
 
     if(questions.length==(presentIndex)){
-      $("#submit").removeClass('hidden');
       $("#next").addClass("hidden");
     }
     else{
@@ -224,6 +226,12 @@ $(document).ready(function() {
     $("#tela_informacao").css('display', 'none');
     $("#quizBox").show();
     $(this).addClass("hidden");
+    //ir para tela final
+    if(presentIndex == 4){//fim do quiz
+        $('#minutos').text($.trim($( '#minutes' ).text()));
+        $("#tela_batalha").hide();
+        $("#tela_jogo_" + personagem).show();
+    }
     presentIndex++;
     renderQuiz(questions, presentIndex);
     changeProgressValue();

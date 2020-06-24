@@ -1,11 +1,33 @@
-#tab-content2 h1{
+#tab-content2 h1,  #tab-content4 h1{
   font-size: 20px;
 }
-p{
+
+#tab-content4 li{
+  all: unset;
+  display:block;
+}
+#tab-content4 li::before {
+  content: "❧";
+  padding-left:1em;
+}
+
+.gif{
+  margin: 0 auto;
+  width: 580px;
+  height: 300px;
+  margin-top: 10px;
+  background-image: url("../imagem/jojo_gif.gif");
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#tab-content2 p{
   font-size: 18px;
   color: #707B7C;
   -webkit-text-stroke-width: 0.01px;
   -webkit-text-stroke-color: black;
+  text-align: justify;
+  text-justify: inter-word;
 }
 /*personagem rank*/
   #tab-content3{

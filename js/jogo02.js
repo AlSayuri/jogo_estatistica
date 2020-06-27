@@ -27,7 +27,9 @@ function fim(){
   }
   else{
     pontuacao_final =  (($.trim($( '#pontos' ).text()) * 10) / $.trim($( '#minutos' ).text())) + score;
-    $('#pontuacao_final').html('Sua pontuação é <br/>' + pontuacao_final.toFixed(1));
+    pontuacao_final = pontuacao_final.toFixed(1);
+    $('#pontuacao_final').html('Sua pontuação é <br/>' + pontuacao_final);
+    salvar_bd();
   }
   $("#pontuacao_final").css('color', 'black');
   $("#tela_jogo_p2").hide();
@@ -150,3 +152,12 @@ $( ".bt_comecar_jogo_02" ).click(function() {
   $( "#working-screen" ).show();
   runGame();
 });
+
+function salvar_bd(){
+  $.post("salvar_jogo.php", { nome: $.trim($( '#nome_jogador' ).text()),
+                              pontuacao: pontuacao_final,
+                              personagem: $.trim($( '#personagem' ).text())},
+                              function(data){
+                                alert(data);
+  });
+}

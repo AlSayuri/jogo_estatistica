@@ -148,12 +148,14 @@ Game.prototype.userSendInput = function (inputChar) {
       console.log("wrong");
       //this.currentLevel = 0;
       this.mode = "waiting";
-      if($.trim($( '#minutos' ).text()) < 5){
+      if($.trim($( '#minutos' ).text()) < 1){
         $('#pontuacao_final').html('Trapaceou! <br/> Não fez o quiz corretamente! <br/>  ٩(ఠ益ఠ)۶');
       }
       else{
         pontuacao_final =  (($.trim($( '#pontos' ).text()) * 10) / $.trim($( '#minutos' ).text())) + this.currentLevel;
-        $('#pontuacao_final').html('Sua pontuação é <br/>' + pontuacao_final.toFixed(1));
+        pontuacao_final = pontuacao_final.toFixed(1);
+        $('#pontuacao_final').html('Sua pontuação é <br/>' + pontuacao_final);
+        salvar_bd();
       }
       $("#pontuacao_final").css('color', 'black');
       $("#tela_jogo_p1").hide();
@@ -203,3 +205,12 @@ $( ".bt_comecar_jogo_01" ).click(function() {
     game.startLevel();
   }, 1000);
 });
+
+function salvar_bd(){
+  $.post("salvar_jogo.php", { nome: $.trim($( '#nome_jogador' ).text()),
+                              pontuacao: pontuacao_final,
+                              personagem: $.trim($( '#personagem' ).text())},
+                              function(data){
+                                alert(data);
+  });
+}

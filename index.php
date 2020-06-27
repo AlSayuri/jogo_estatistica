@@ -1,3 +1,11 @@
+<?php
+
+  $con = mysqli_connect("localhost", "root", "", "jogo", "3308");
+  $query_p1 = "SELECT nome, pontuacao FROM jogo where personagem = 'p1' order by pontuacao desc limit 7";
+  $query_p2 = "SELECT nome, pontuacao FROM jogo where personagem = 'p2' order by pontuacao desc limit 7";
+  $query_p3 = "SELECT nome, pontuacao FROM jogo where personagem = 'p3' order by pontuacao desc limit 7";
+?>
+
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -107,16 +115,32 @@
 		                </tr>
                     <tbody>
                       <?php
-                          $i=1;
-                          do {
-                              echo "<tr>";
-                              echo "<td>" . $i . "</td>";
-                              echo "<td>nome" . $i . "</td>";
-                              echo "<td>xxxx". "</td>";
-                              echo "</tr>";
+                        $i=0;
+                        if ($result = $con ->query($query_p1)) {
+                          while ($row = $result->fetch_assoc()) {
+                            $i++;
+                            $nome = $row["nome"];
+                            $pontuacao = $row["pontuacao"];
+
+                            echo '<tr>
+                            <td>'.$i.'</td>
+                            <td>'.$nome.'</td>
+                            <td>'.$pontuacao.'</td>
+                            </tr>';
+                          }
+                          if($i < 7){
+                            while($i<7){
                               $i++;
-                          } while ($i < 9);
-                      ?>
+                              echo '<tr>
+                              <td>'.$i.'</td>
+                              <td>'.'</td>
+                              <td>' .'</td>
+                              </tr>';
+                            }
+                          }
+                        }
+
+                    ?>
                     </tbody>
 	              </thead>
               </table>
@@ -131,16 +155,32 @@
 		                </tr>
                     <tbody>
                       <?php
-                          $i=1;
-                          do {
-                              echo "<tr>";
-                              echo "<td>" . $i . "</td>";
-                              echo "<td>nome" . $i . "</td>";
-                              echo "<td>xxxx". "</td>";
-                              echo "</tr>";
+                        $i=0;
+                        if ($result = $con ->query($query_p2)) {
+                          while ($row = $result->fetch_assoc()) {
+                            $i++;
+                            $nome = $row["nome"];
+                            $pontuacao = $row["pontuacao"];
+
+                            echo '<tr>
+                            <td>'.$i.'</td>
+                            <td>'.$nome.'</td>
+                            <td>'.$pontuacao.'</td>
+                            </tr>';
+                          }
+                          if($i < 7){
+                            while($i<7){
                               $i++;
-                          } while ($i < 9);
-                      ?>
+                              echo '<tr>
+                              <td>'.$i.'</td>
+                              <td>'.'</td>
+                              <td>' .'</td>
+                              </tr>';
+                            }
+                          }
+                        }
+
+                    ?>
                     </tbody>
 	              </thead>
               </table>
@@ -155,16 +195,32 @@
 		                </tr>
                     <tbody>
                       <?php
-                          $i=1;
-                          do {
-                              echo "<tr>";
-                              echo "<td>" . $i . "</td>";
-                              echo "<td>nome" . $i . "</td>";
-                              echo "<td>xxxx". "</td>";
-                              echo "</tr>";
+                        $i=0;
+                        if ($result = $con ->query($query_p3)) {
+                          while ($row = $result->fetch_assoc()) {
+                            $i++;
+                            $nome = $row["nome"];
+                            $pontuacao = $row["pontuacao"];
+
+                            echo '<tr>
+                            <td>'.$i.'</td>
+                            <td>'.$nome.'</td>
+                            <td>'.$pontuacao.'</td>
+                            </tr>';
+                          }
+                          if($i < 7){
+                            while($i<7){
                               $i++;
-                          } while ($i < 9);
-                      ?>
+                              echo '<tr>
+                              <td>'.$i.'</td>
+                              <td>'.'</td>
+                              <td>' .'</td>
+                              </tr>';
+                            }
+                          }
+                        }
+
+                    ?>
                     </tbody>
 	              </thead>
               </table>

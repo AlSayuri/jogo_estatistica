@@ -253,7 +253,8 @@ $(document).ready(function() {
 var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
 var totalSeconds = 0;
-setInterval(setTime, 1000);
+//setInterval(setTime, 1000);
+setInterval(setTime, 100);
 
 function setTime(){
   ++totalSeconds;

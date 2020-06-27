@@ -1,3 +1,4 @@
+
 <!doctype html>
 <html lang="pt-br">
   <head>
@@ -33,7 +34,7 @@
               <br>
               Pontos: <label id="pontos">0</label>
           </div>
-          <div class="nome_jogador">
+          <div class="nome_jogador" id="nome_jogador">
             <label>
               <?php echo $_POST['nome'];?>
             </label>

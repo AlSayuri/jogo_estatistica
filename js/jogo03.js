@@ -314,7 +314,8 @@ function jogo03(){
           }
           else{
             pontuacao_final =  (($.trim($( '#pontos' ).text()) * 10) / $.trim($( '#minutos' ).text())) + parseInt(this.scoreContainer.innerHTML);
-            $('#pontuacao_final').html('Sua pontuação é <br/>' +  pontuacao_final.toFixed(1));
+            pontuacao_final = pontuacao_final.toFixed(1);
+            $('#pontuacao_final').html('Sua pontuação é <br/>' +  pontuacao_final);
           }
           $("#pontuacao_final").css('color', 'black');
           $("#tela_jogo_p3").hide();
@@ -334,4 +335,13 @@ function jogo03(){
 
 if($.trim($( '#personagem' ).text()) == "p3"){
   jogo03();
+}
+
+function salvar_bd(){
+  $.post("salvar_jogo.php", { nome: $.trim($( '#nome_jogador' ).text()),
+                              pontuacao: pontuacao_final,
+                              personagem: $.trim($( '#personagem' ).text())},
+                              function(data){
+                                alert(data);
+  });
 }

@@ -19,6 +19,7 @@
   background-image: url("../imagem/jojo_gif.gif");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 400px auto;
 }
 
 #tab-content2 p{
@@ -28,6 +29,7 @@
   -webkit-text-stroke-color: black;
   text-align: justify;
   text-justify: inter-word;
+  text-indent: 40px; 
 }
 /*personagem rank*/
   #tab-content3{

@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="css/jogo02.css">
     <link rel="stylesheet" href="css/jogo03.css">
     <link rel="stylesheet" href="css/tela_final.css">
-    <title>Hello, world!</title>
+    <title>Jogo Estatística</title>
 
   </head>
   <body>
@@ -50,6 +50,8 @@
               <div class="my-progress">
                 <progress class="my-progress-bar" min="0" max="100" value="0" step="9" aria-labelledby="my-progress-completion"></progress>
                 <p id="my-progress-completion" class="js-my-progress-completion sr-only" aria-live="polite">0% complete</p>
+              </div>
+              <div id="img_questao">
               </div>
               <div class="quizBox" id="quizBox">
                 <div class="question">

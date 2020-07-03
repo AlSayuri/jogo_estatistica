@@ -26,7 +26,7 @@ function fim(){
     $('#pontuacao_final').html('Trapaceou! <br/> Não fez o quiz corretamente! <br/>  ٩(ఠ益ఠ)۶');
   }
   else{
-    pontuacao_final =  (($.trim($( '#pontos' ).text()) * 10) / $.trim($( '#minutos' ).text())) + score;
+    pontuacao_final =  ($.trim($( '#pontos' ).text())  / $.trim($( '#minutos' ).text())) + score;
     pontuacao_final = pontuacao_final.toFixed(1);
     $('#pontuacao_final').html('Sua pontuação é <br/>' + pontuacao_final);
     salvar_bd();
@@ -158,6 +158,6 @@ function salvar_bd(){
                               pontuacao: pontuacao_final,
                               personagem: $.trim($( '#personagem' ).text())},
                               function(data){
-                                alert(data);
+                                //alert(data);
   });
 }

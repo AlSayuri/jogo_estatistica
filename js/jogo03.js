@@ -309,12 +309,13 @@ function jogo03(){
       };
       Game.prototype.endGame = function () {
           this.updateState(this.STATES.ENDED);
-          if($.trim($( '#minutos' ).text()) < 5){
+          if($.trim($( '#minutos' ).text()) < 2){
             $('#pontuacao_final').html('Trapaceou! <br/> Não fez o quiz corretamente! <br/>  ٩(ఠ益ఠ)۶');
           }
           else{
-            pontuacao_final =  (($.trim($( '#pontos' ).text()) * 10) / $.trim($( '#minutos' ).text())) + parseInt(this.scoreContainer.innerHTML);
+            pontuacao_final =  ($.trim($( '#pontos' ).text())  / $.trim($( '#minutos' ).text())) + parseInt(this.scoreContainer.innerHTML);
             pontuacao_final = pontuacao_final.toFixed(1);
+            salvar_bd();
             $('#pontuacao_final').html('Sua pontuação é <br/>' +  pontuacao_final);
           }
           $("#pontuacao_final").css('color', 'black');
@@ -342,6 +343,6 @@ function salvar_bd(){
                               pontuacao: pontuacao_final,
                               personagem: $.trim($( '#personagem' ).text())},
                               function(data){
-                                alert(data);
+                                //alert(data);
   });
 }

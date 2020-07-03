@@ -12,34 +12,44 @@ var texto_resultado_rodada =" ";
 
 const quizdata=[
       {
-        question:"Characterized by skill at understanding and profiting by circumstances",
-        options:["Prescient", "Analyst", "Diminution", "Shrewd"],
-        answer:"Shrewd",
-        category:1
+        question:"Com base nas informações da tabela de vendas de carros no município de Rubelita-MG entre os anos de 2014 e 2019. Calcule a média, mediana, moda e desvio padrão e marque a opção correta.",
+        options:["A) Média: 325,67; Mediana: 333,5; Moda: amodal; Desvio Padrão: 55,78",
+                  "B) Média: 325,67; Mediana: 323,5; Moda: amodal; Desvio Padrão: 55,72",
+                  "C) Média: 325,57; Mediana: 333,5; Moda: amodal; Desvio Padrão: 55,72",
+                  "D) Média: 320,67; Mediana: 327,8; Moda: amodal; Desvio Padrão: 54,78"],
+        answer:"B) Média: 325,67; Mediana: 323,5; Moda: amodal; Desvio Padrão: 55,72"
       },
       {
-        question:"To refuse to acknowledge as one's own or as connected with oneself",
-        options:["Prevalent", "Disown", "Squalid", "Employee"],
-        answer:"Disown",
-        category:2
+        question:"Dadas as afirmativas abaixo responda: </br> I - Entre os anos de 2014 e 2019 houve um crescimento de mais que 300% de venda de carro. </br> II - Houve uma diminuição de 64% em vendas de carro de menos entre 2015 e 2016. </br> III - Foi de 315,85% o crescimento de vendas entre 2016 e 2019.",
+        options:["A) Nenhuma das alternativas estão corretas.",
+                "B) I e III estão corretas.",
+                "C) Apenas a II está correta.",
+                "D) Apenas a III está correta."],
+        answer:"A) Nenhuma das alternativas estão corretas."
       },
       {
-        question:"Not having the abilities desired or necessary for any purpose",
-        options:["Incompetent", "Impoverish", "Coxswain", "Devious"],
-        answer:"Incompetent",
-        category:3
+        question:"Dada as informações de 5 municípios brasileiros. Qual o valor da correlação entre a população rural e consumo per capita da população rural?",
+        options:["A) -0,72. Não possui correlação.",
+                "B) 0,82. Possui uma correlação moderada.",
+                "C) -0,82. Não possui correlação.",
+                "D) -0,72. Possui correlação moderada."],
+        answer:"D) -0,72. Possui correlação moderada."
       },
       {
-        question:"Lizard that changes color in different situations",
-        options:["Scruple", "Depredation", "Chameleon", "Whimsical"],
-        answer:"Chameleon",
-        category:1
+        question:"No município de Porto Barreiro-PR, há uma população total de 3454 pessoas, e 47% são mulheres. Supondo que 3/5 dos homens não possuem carro, qual a probabilidade de um homem ser escolhido aleatoriamente ter um carro?",
+        options:["A) 35,80%.",
+                "B) 45,34%.",
+                "C) 40%.",
+                "D) 30%."],
+        answer:"C) 40%."
       },
       {
-        question:"Having the title of an office without the obligations",
-        options:["Reciprocal", "Unsullied", "Titular", "Inflated"],
-        answer:"Titular",
-        category:2
+        question:"Com base nas informações sobre o município de Oleo-SP na tabela. Calcule o 1º Quartil e o 9º Decil. ",
+        options:["A) 1º Quartil: 13,97; 9º Decil: 45,16.",
+                "B) 1º Quartil: 12,77; 9º Decil: 48,16.",
+                "C) 1º Quartil: 12,97; 9º Decil: 45,16.",
+                "D) 1º Quartil: 13,77; 9º Decil: 44.16."],
+        answer:"C) 1º Quartil: 12,97; 9º Decil: 45,16."
       }
     ];
 
@@ -82,6 +92,15 @@ function renderQuestion(question){
 
 /** Render quiz :: Question and option **/
 function renderQuiz(questions, index){
+  //mostrar imagem questao
+  if(index == 3){
+    $("#img_questao").hide();
+  }
+  else{
+    $("#img_questao").show();
+    $("#img_questao").html("<img id ='imagem_questao' src='imagem/questoes/q"+index+".png'/>");
+  }
+
   var currentQuest=questions[index];
   renderQuestion(currentQuest.question);
   renderOptions(currentQuest.options);
@@ -152,7 +171,7 @@ function resultado(correct,presentIndex,clicked ){
       if(correct == clicked){
         $(bolinha).css({"background-color":"#2ECC71"});
         texto_resultado_rodada = "Acertou a resposta!";
-        pontos_jogador = Number(pontos_jogador) + 2;
+        pontos_jogador = Number(pontos_jogador) + 10;
       }
       else{
         $(bolinha).css({"background-color":"#EC7063"});
@@ -253,8 +272,7 @@ $(document).ready(function() {
 var minutesLabel = document.getElementById("minutes");
 var secondsLabel = document.getElementById("seconds");
 var totalSeconds = 0;
-//setInterval(setTime, 1000);
-setInterval(setTime, 100);
+setInterval(setTime, 1000);
 
 function setTime(){
   ++totalSeconds;

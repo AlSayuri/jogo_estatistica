@@ -1,6 +1,6 @@
 <?php
 
-  $con = mysqli_connect("localhost", "root", "", "jogo", "3308");
+  $con = mysqli_connect("localhost", "id14257463_root", "Jogodb123456.", "id14257463_jogo");
   $query_p1 = "SELECT nome, pontuacao FROM jogo where personagem = 'p1' order by pontuacao desc limit 7";
   $query_p2 = "SELECT nome, pontuacao FROM jogo where personagem = 'p2' order by pontuacao desc limit 7";
   $query_p3 = "SELECT nome, pontuacao FROM jogo where personagem = 'p3' order by pontuacao desc limit 7";
@@ -20,7 +20,7 @@
     <link rel="stylesheet" href="css/estilo_inicio.css">
     <link rel="stylesheet" href="css/estilo_inicio_outros.css">
 
-    <title>Hello, world!</title>
+    <title>Jogo Estatística</title>
   </head>
   <body>
     <!-- tela geral -->
@@ -36,7 +36,7 @@
                 <div class="div_personagem">
                   <p class="p_tela">
                         <!-- p1-->
-				                <input type="radio" name="personagem" id="p1" value="p1">
+				                <input type="radio" name="personagem" id="p1" value="p1" required="required">
                         <label for="p1" id="p1">
                           <img src="imagem/joseph.png">
                   </p><!-- p_tela-->
@@ -56,7 +56,7 @@
                   </p><!-- p_tela-->
                 </div><!-- div_personagem-->
                 <div class="nome_comecar">
-                    <input type="text" name="nome" placeholder="Nome">
+                    <input type="text" name="nome" placeholder="Nome" required="required">
                     <button type="submit" id="jogar">Jogar</button>
                 </div>  <!-- nome_comecar -->
               </form>
@@ -68,20 +68,29 @@
             <input type="radio" name="tabs" id="tab2">
             <label for="tab2">Como Jogar</label>
             <div id="tab-content2" class="tab-content">
-              <h1>Objetivo:</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              <h1>Como Jogar:</h1>
+              <p>
+                O jogador terá de escolher um personagem dentre três. Todos os
+                personagens possuem as mesmas questões de estatística, contendo
+                no total de 5 perguntas com 4 alternativas, sendo apenas 1 correta.
+                No final da última questão o jogador será redirecionado para um joguinho
+                com a finalidade de aumentar a pontuação do jogador.
+                Para cada personagem o joguinho final é diferente, onde:
+              </p>
+              <p>
+                ❧ 1º personagem: é um jogo de memória, onde o jogador deverá memorizar a sequência e reproduzi-lo.
+              </p>
+              <p>
+                ❧ 2º personagem: o jogador deverá analisar a expressão matemática e informar se corresponde ao resultado informado, porém terá que analisar rapidamente.
+              </p>
+              <p>
+                ❧ 3º personagem: o jogo consiste em empilhar os blocos.
               </p>
               <h1>Pontuação:</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-              </p>
-              <h1>Personagens:</h1>
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+              <p>
+                Cada questão vale 10 pontos, porém se o adversário acertar, o jogador perderá 0,5, 1 ou 1,5 pontos.
+                No joguinho final, cada cada acerto valerá 1 ponto. A pontuação final é dada pela seguinte expressão:
+                (pontução_quiz / minuto_inteiro)  + pontuação_joquinho.
               </p>
             </div>
           </li>

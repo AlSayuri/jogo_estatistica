@@ -36,7 +36,7 @@ const quizdata=[
         answer:"D) -0,72. Possui correlação moderada."
       },
       {
-        question:"No município de Porto Barreiro-PR, há uma população total de 3454 pessoas, e 47% são mulheres. Supondo que 3/5 dos homens não possuem carro, qual a probabilidade de um homem ser escolhido aleatoriamente ter um carro?",
+        question:"No município de Porto Barreiro-PR, há uma população total de 3454 pessoas, e 1639 são mulheres. Supondo que 3/5 dos homens não possuem carro, qual a probabilidade de um homem ser escolhido aleatoriamente ter um carro?",
         options:["A) 35,80%.",
                 "B) 45,34%.",
                 "C) 40%.",
